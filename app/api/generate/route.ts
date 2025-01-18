@@ -110,7 +110,7 @@ export async function POST(req: NextRequest) {
     const styleTemplate = STYLE_PROMPTS[style];
     const formattedPrompt = styleTemplate.base.replace("{}", prompt);
     const negativePrompt = styleTemplate.negative;
-    console.log(style,prompt)
+    console.log(style,formattedPrompt)
     const hfResponse = await fetch(
       `https://api-inference.huggingface.co/models/${HF_MODEL}`,
       {
@@ -124,16 +124,16 @@ export async function POST(req: NextRequest) {
           parameters: {
             negative_prompt: negativePrompt,
             num_inference_steps: 30,
-            guidance_scale: 7.5,
+            guidance_scale: 7.5
           },
           options: {
             wait_for_model: true,
-            use_cache: true,
+            use_cache: true
           },
-        }),
+        })
       }
     );
-
+    
     if (!hfResponse.ok) {
       const errorText = await hfResponse.text();
       throw new Error(`Hugging Face API error: ${errorText}`);
