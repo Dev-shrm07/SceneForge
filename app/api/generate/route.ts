@@ -78,7 +78,6 @@ export async function POST(req: NextRequest) {
   }
   const HF_API_TOKEN = process.env.HF_TOKEN;
   const HF_MODEL = "stabilityai/stable-diffusion-3.5-large";
-  console.log(HF_API_TOKEN)
   if (!HF_API_TOKEN) {
     return NextResponse.json(
       {
@@ -113,7 +112,7 @@ export async function POST(req: NextRequest) {
     const styleTemplate = STYLE_PROMPTS[style];
     const formattedPrompt = styleTemplate.base.replace("{}", prompt);
     const negativePrompt = styleTemplate.negative;
-    console.log(style,formattedPrompt)
+
     const hfResponse = await fetch(
       `https://api-inference.huggingface.co/models/${HF_MODEL}`,
       {
@@ -152,7 +151,7 @@ export async function POST(req: NextRequest) {
 
     const imageBuffer = await hfResponse.arrayBuffer();
     const imageBase64 = Buffer.from(imageBuffer).toString("base64");
-    console.log(imageBase64)
+   
     return NextResponse.json(
       {
         success: true,
