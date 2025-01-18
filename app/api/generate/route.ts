@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
   }
   const HF_API_TOKEN = process.env.HF_TOKEN;
   const HF_MODEL = "stabilityai/stable-diffusion-3.5-large";
-
+  console.log(HF_API_TOKEN)
   if (!HF_API_TOKEN) {
     return NextResponse.json(
       {
