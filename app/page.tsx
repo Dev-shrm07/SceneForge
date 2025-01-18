@@ -73,7 +73,7 @@ const Home = () => {
     setLoading(true);
     setError("");
 
-    for (let attempt = 1; attempt <= 3; attempt++) {
+    for (let attempt = 1; attempt <= 5; attempt++) {
       try {
         console.log(
           `Attempt ${attempt}: Generating image in ${selectedStyle} style...`
@@ -95,7 +95,7 @@ const Home = () => {
         setLoading(false)
         return; // Exit loop if successful
       } catch (err) {
-        if (attempt === 3) {
+        if (attempt === 5) {
           setLoading(false)
           setError(err instanceof Error ? err.message : "An error occurred");
         } else {
