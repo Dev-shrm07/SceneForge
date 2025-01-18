@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
+
 // type GenerationResponse = {
 //   success: boolean;
 //   image?: string;
@@ -60,6 +61,8 @@ const STYLE_PROMPTS: StyleTemplates = {
       "ugly, deformed, noisy, blurry, low quality, pixelated, anime, cartoon, drawing",
   },
 };
+
+export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
   const body: RequestBody = await req.json();
@@ -133,7 +136,7 @@ export async function POST(req: NextRequest) {
         })
       }
     );
-    
+
     if (!hfResponse.ok) {
       const errorText = await hfResponse.text();
       throw new Error(`Hugging Face API error: ${errorText}`);
