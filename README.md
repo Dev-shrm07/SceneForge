@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SceneForge 
 
-## Getting Started
+SceneForge AI is a web-based AI image generation tool that allows users to create stunning visuals by selecting from various artistic styles and providing a description of their desired scene. The tool utilizes **Stable Diffusion 3.5 Large** to generate high-quality images.
 
-First, run the development server:
+## Available Styles
+| Style       | Description |
+|------------|-------------|
+| **Manga**  | Classic Japanese manga style with clean ink lines and monochrome shading. |
+| **Anime**  | Vibrant colors with cel-shaded details and smooth lighting. |
+| **Cyberpunk** | Futuristic cityscapes with neon lighting and high-tech elements. |
+| **Ancient** | Historical art style with a weathered texture and parchment effect. |
+| **Cardboard** | A handmade, DIY aesthetic with visible corrugated patterns. |
+| **Comic** | Western comic book style with bold outlines and dynamic composition. |
+| **Realism** | Photorealistic images with hyper-detailed textures and lighting. |
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Example
+### Input:
+- **Style:** Manga
+- **Description:** A horseman in storm
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Output:
+<img width="803" alt="Screenshot 2025-01-19 183119" src="https://github.com/user-attachments/assets/3c5b8aac-f346-496c-bf43-3b0db38829cb" />
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
