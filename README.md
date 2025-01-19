@@ -4,7 +4,7 @@ SceneForge AI is a web-based AI image generation tool that allows users to creat
 
 ## Available Styles
 | Style       | Description |
-|------------|-------------|
+|------------|-------------| 
 | **Manga**  | Classic Japanese manga style with clean ink lines and monochrome shading. |
 | **Anime**  | Vibrant colors with cel-shaded details and smooth lighting. |
 | **Cyberpunk** | Futuristic cityscapes with neon lighting and high-tech elements. |
