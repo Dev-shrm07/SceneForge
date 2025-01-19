@@ -1,6 +1,6 @@
 # SceneForge 
 
-SceneForge AI is a web-based AI image generation tool that allows users to create stunning visuals by selecting from various artistic styles and providing a description of their desired scene. The tool utilizes **Stable Diffusion 3.5 Large** to generate high-quality images. [Site](https://sceneforge.site/)
+SceneForge AI is a web-based AI image generation tool that allows users to create stunning visuals by selecting from various artistic styles and providing a description of their desired scene. The tool utilizes **Stable Diffusion 3.5 Large** to generate high-quality images. [sceneforge.site](https://sceneforge.site/)
 
 ## Available Styles
 | Style       | Description |
